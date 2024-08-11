@@ -1,154 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <title>Wyntch</title>
+    <link rel="shortcut icon" href="/images/wyn.png" type="image/x-icon">
+    <link
+      href="https://unpkg.com/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#9F88C0",
-                        secondary: "#DCBADF",
-                    },
-                    container: {
-                        center: true,
-                        padding: "2rem",
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#9F88C0",
+              secondary: "#DCBADF",
             },
-        };
+            container: {
+              center: true,
+              padding: "2rem",
+            },
+          },
+        },
+      };
     </script>
     <style>
-        .equal-height {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+      .equal-height {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container p-8 bg-gray-50">
-        <!-- Main Background Section -->
-        <div class="bg-white rounded-3xl shadow-sm" style="background: url('/images/bg.jpg'); background-size: cover;">
-            <!-- Navigation Bar -->
-            <nav class="flex justify-between items-center p-5">
-                <div>
-                    <i class="bx bxs-user-rectangle text-3xl text-primary"></i>
-                    <i class="bx bx-message-square-add text-3xl text-secondary"></i>
-                </div>
-                <div>
-                    <ul class="flex gap-6 font-bold">
-                        <li>
-                            <a href="#" class="text-xl hover:border-b-2 hover:border-primary">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-xl hover:border-b-2 hover:border-primary">Search</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-xl hover:border-b-2 hover:border-primary">Message</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="flex gap-6">
-                    <a href="#" class="font-semibold outline z-50 outline-primary bg-white rounded-full px-5 py-1 hover:bg-primary hover:text-white transition-all duration-100">Login</a>
-                    <a href="#" class="font-semibold bg-primary text-white rounded-full px-5 py-1 hover:bg-white hover:text-primary hover:outline hover:outline-primary transition-all duration-100">Sign Up</a>
-                </div>
-            </nav>
+      <!-- Main Background Section -->
+      <div
+        class="bg-white rounded-3xl shadow-sm"
+        style="
+          background: url(&quot;/images/bg.jpg&quot;);
+          background-size: cover;
+        "
+      >
+        <!-- Navigation Bar -->
+        <nav class="flex justify-between items-center p-5">
+          <!-- Ikon pengguna dan pesan -->
+          <div class="flex gap-6 items-center">
+            <i
+              class="bx bxs-user-rectangle text-3xl text-primary cursor-pointer"
+            ></i>
+            <i
+              class="bx bx-message-square-add text-3xl text-secondary cursor-pointer"
+            ></i>
+          </div>
 
-            <!-- Hero Section -->
-            <div class="mt-5 px-5">
-                <div class="py-20 bg-primary rounded-tl-3xl rounded-tr-3xl relative">
-                    <div class="absolute top-10 right-0 bottom-0 bg-secondary rounded-tr-3xl rounded-tl-full p-32"></div>
-                    <div class="absolute top-20 left-0 bottom-0 bg-secondary rounded-tr-3xl rounded-tr-full p-24"></div>
-                    <div class="relative -top-16 pl-8">
-                        <img src="/images/logo.png" width="80" />
-                    </div>
-                    <div class="relative -top-14 pl-20 z-50">
-                        <h1 class="text-5xl font-bold text-white mb-2">Raiden Shogun</h1>
-                        <p class="text-xl w-1/2 text-white font-semibold">
-                            She is the god of eternity from Inazuma and the current Electro Archon
-                        </p>
-                    </div>
-                    <div class="absolute right-0 bottom-0">
-                        <img src="/images/raiden.png" width="400" />
-                    </div>
-                    <a href="#" class="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white border-b-4 border-white font-bold px-5 py-2 bg-primary rounded-full">READ MORE</a>
-                </div>
+          <!-- Menu navigasi -->
+          <div class="hidden md:flex">
+            <ul class="flex gap-6 font-bold">
+              <li>
+                <a
+                  href="#"
+                  class="text-xl hover:border-b-2 hover:border-primary"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-xl hover:border-b-2 hover:border-primary"
+                  >Search</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-xl hover:border-b-2 hover:border-primary"
+                  >Message</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Login dan Sign Up -->
+          <div class="hidden md:flex gap-6">
+            <a
+              href="#"
+              class="font-semibold outline z-50 outline-primary bg-white rounded-full px-5 py-1 hover:bg-primary hover:text-white transition-all duration-100"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="font-semibold bg-primary text-white rounded-full px-5 py-1 hover:bg-white hover:text-primary hover:outline hover:outline-primary z-50 transition-all duration-100"
+              >Sign Up</a
+            >
+          </div>
+          <a href="#" class="md:hidden"><i class="bx bx-menu text-3xl"></i></a>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="mt-5 px-5">
+          <div class="py-20 bg-primary rounded-tl-3xl rounded-tr-3xl relative">
+            <div
+              class="absolute md:top-10 right-0 bottom-0 bg-secondary rounded-tr-3xl rounded-tl-full p-32"
+            ></div>
+            <div
+              class="absolute md:top-20 left-0 absolute bottom-0 bg-secondary rounded-tr-3xl rounded-tr-full p-24"
+            ></div>
+            <div class="relative -top-16 pl-8">
+              <img src="/images/logo.png" width="80" />
             </div>
+            <div class="relative md:-top-14 md:pl-20 -top-14 pl-5 z-50">
+              <h1 class="md:text-5xl text-2xl font-bold text-white mb-2">
+                Raiden Shogun
+              </h1>
+              <p class="md:text-xl text-sm md:w-1/2 text-white font-semibold">
+                She is the god of eternity from Inazuma and the current Electro
+                Archon
+              </p>
+            </div>
+            <div class="absolute md:right-0 md:bottom-0">
+              <img src="/images/raiden.png" width="400" />
+            </div>
+            <a
+              href="#"
+              class="md:absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white border-b-4 border-white font-bold px-5 py-2 bg-primary rounded-full"
+              >READ MORE</a
+            >
+          </div>
+        </div>
 
-            <!-- Main Content Grid -->
-            <div class="p-5 grid grid-cols-4 gap-6">
-                <!-- Atwork Section -->
-                <div class="equal-height">
-                    <h1 class="text-2xl font-bold">Atwork ></h1>
-                    <div class="grid grid-cols-2 gap-2 mt-2">
-                        <div>
-                            <img src="https://i.pinimg.com/564x/1c/47/a7/1c47a7545538bba2fe9d2ee4f884784c.jpg" class="rounded-3xl w-full h-auto" />
-                        </div>
-                        <div>
-                            <img src="https://i.pinimg.com/564x/1c/47/a7/1c47a7545538bba2fe9d2ee4f884784c.jpg" class="rounded-3xl w-full h-auto" />
-                        </div>
-                        <div class="col-span-2 flex justify-center mt-2">
-                            <a href="#" class="bg-primary text-white px-5 py-2 rounded-full text-center w-full">VIEW MORE</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Main Content Grid -->
+        <div class="p-5 grid md:grid-cols-4 gap-6">
+          <!-- Atwork Section -->
+          <div class="equal-height">
+            <h1 class="text-2xl font-bold">Atwork ></h1>
+            <div class="grid grid-cols-2 gap-2 mt-2">
+              <div>
+                <img
+                  src="https://i.pinimg.com/564x/1c/47/a7/1c47a7545538bba2fe9d2ee4f884784c.jpg"
+                  class="rounded-3xl w-full h-auto"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://i.pinimg.com/564x/1c/47/a7/1c47a7545538bba2fe9d2ee4f884784c.jpg"
+                  class="rounded-3xl w-full h-auto"
+                />
+              </div>
+              <div class="col-span-2 flex justify-center mt-2">
+                <a
+                  href="#"
+                  class="bg-primary text-white px-5 py-2 rounded-full text-center w-full"
+                  >VIEW MORE</a
+                >
+              </div>
+            </div>
+          </div>
 
-                <!-- Recent Search Section -->
-                <div class="2">
-                    <h1 class="text-2xl font-bold text-center">Recent Search</h1>
-                    <!-- Search Inputs -->
-                    <!-- search 1 -->
-                    <div class="relative w-full mt-4">
-                        <input type="search" class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-secondary text-white placeholder-white" placeholder="Raiden shogun build" />
-                        <i class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"></i>
-                    </div>
-                    <!-- search 2 -->
-                    <div class="relative w-full mt-2">
-                        <input type="search" class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-[#836186] text-white placeholder-white" placeholder="Raiden shogun wallpaper" />
-                        <i class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"></i>
-                    </div>
-                    <!-- search 3 -->
-                    <div class="relative w-full mt-2">
-                        <input type="search" class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-[#C39AC6] text-white placeholder-white" placeholder="Raiden shogun cosplay" />
-                        <i class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"></i>
-                    </div>
-                    <!-- search 4 -->
-                    <div class="relative w-full mt-2">
-                        <input type="search" class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-[#6E2675] text-white placeholder-white" placeholder="Raiden shogun icon" />
-                        <i class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"></i>
-                    </div>
-                </div>
+          <!-- Recent Search Section -->
+          <div class="2">
+            <h1 class="text-2xl font-bold text-center">Recent Search</h1>
+            <!-- Search Inputs -->
+            <!-- search 1 -->
+            <div class="relative w-full mt-4">
+              <input
+                type="search"
+                class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-secondary text-white placeholder-white"
+                placeholder="Raiden shogun build"
+              />
+              <i
+                class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"
+              ></i>
+            </div>
+            <!-- search 2 -->
+            <div class="relative w-full mt-2">
+              <input
+                type="search"
+                class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-[#836186] text-white placeholder-white"
+                placeholder="Raiden shogun wallpaper"
+              />
+              <i
+                class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"
+              ></i>
+            </div>
+            <!-- search 3 -->
+            <div class="relative w-full mt-2">
+              <input
+                type="search"
+                class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-[#C39AC6] text-white placeholder-white"
+                placeholder="Raiden shogun cosplay"
+              />
+              <i
+                class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"
+              ></i>
+            </div>
+            <!-- search 4 -->
+            <div class="relative w-full mt-2">
+              <input
+                type="search"
+                class="w-full rounded-full px-5 py-3 pl-10 pr-4 bg-[#6E2675] text-white placeholder-white"
+                placeholder="Raiden shogun icon"
+              />
+              <i
+                class="bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl"
+              ></i>
+            </div>
+          </div>
 
-                <!-- Icon Section -->
-                <div class="1">
-                    <div class="grid gap-2 mt-2">
-                        <div class="w-full bg-primary p-5 rounded-3xl flex gap-2">
-                            <img src="/images/inazuma.png" class="w-10" />
-                            <h1 class="text-2xl font-bold text-white">Inazuma</h1>
-                        </div>
-                        <div class="w-full bg-secondary p-5 rounded-3xl flex gap-2">
-                            <img src="/images/elektro.png" class="w-10" />
-                            <h1 class="text-2xl font-bold text-white">Electro Character</h1>
-                        </div>
-                        <div class="w-full bg-[#C39AC6] p-5 rounded-3xl flex gap-2">
-                            <img src="/images/pedang.png" class="w-10" />
-                            <h1 class="text-2xl font-bold text-white">Constellations</h1>
-                        </div>
-                    </div>
-                </div>
+          <!-- Icon Section -->
+          <div class="1">
+            <div class="grid gap-2 mt-2">
+              <div class="w-full bg-primary p-5 rounded-3xl flex gap-2">
+                <img src="/images/inazuma.png" class="w-10" />
+                <h1 class="text-2xl font-bold text-white">Inazuma</h1>
+              </div>
+              <div class="w-full bg-secondary p-5 rounded-3xl flex gap-2">
+                <img src="/images/elektro.png" class="w-10" />
+                <h1 class="text-2xl font-bold text-white">Electro</h1>
+              </div>
+              <div class="w-full bg-[#C39AC6] p-5 rounded-3xl flex gap-2">
+                <img src="/images/pedang.png" class="w-10" />
+                <h1 class="text-2xl font-bold text-white">Constellations</h1>
+              </div>
+            </div>
+          </div>
 
-                <!-- Image Section -->
-                <div class="grid">
-                    <img src="https://i.pinimg.com/736x/de/0e/2c/de0e2c341b864a94fcbb1b3991eed572.jpg" class="rounded-3xl" />
-                </div>
+          <!-- Image Section -->
+          <div class="grid">
+            <img
+              src="https://i.pinimg.com/736x/de/0e/2c/de0e2c341b864a94fcbb1b3991eed572.jpg"
+              class="rounded-3xl"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer mt-5">
+        <div class="container mx-auto px-6">
+            <div class="w-full bg-primary p-5 rounded-3xl flex items-center justify-center gap-3">
+                <img src="/images/wyn.png" alt="Wyntch Logo" class="h-8 md:h-10">
+                <h1 class="font-semibold text-white text-sm md:text-lg">
+                    &copy; 2024 Wyntch. All rights reserved.
+                </h1>
             </div>
         </div>
     </div>
-</body>
+    
+    </div>
+  </body>
 </html>
